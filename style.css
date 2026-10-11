@@ -1,0 +1,312 @@
+ :root {
+            --bg-dark: #1b1a19;
+            --bg-light: #f5f4f1;
+            --gold-accent: #a68a5c;
+            --gold-hover: #947a4e;
+            --border-color: #e2e0da;
+            --text-dark: #1b1a19;
+            --text-muted: #78756e;
+            --text-muted-dark: rgba(255, 255, 255, 0.45);
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+            min-height: 100vh;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        /* Split Screen Main Container */
+        .split-container {
+            display: flex;
+            min-height: 100vh;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        /* ================= LEFT DARK PANEL ================= */
+        .left-panel {
+            width: 50%;
+            background-color: var(--bg-dark);
+            color: var(--white);
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        .brand-header h1 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+            line-height: 1.1;
+            color: #ffffff;
+        }
+
+        .brand-header p {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            color: var(--gold-accent);
+            margin-top: 4px;
+            text-transform: uppercase;
+        }
+
+        .carousel-container {
+            margin: auto 0;
+            padding: 2.5rem 0;
+            max-width: 520px;
+        }
+
+        .carousel-headline {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            color: #f1f0eb;
+            transition: opacity 0.25s ease-in-out;
+        }
+
+        /* Dash Pill Pagination Slider */
+        .dash-slider {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 2rem;
+        }
+
+        .dash-btn {
+            height: 5px;
+            width: 28px;
+            border-radius: 9999px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .dash-btn:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .dash-btn.active {
+            background-color: white;
+            width: 32px;
+        }
+
+        /* Fixed Bottom Caption Padding to prevent cutting off */
+        .left-footer {
+            font-size: 0.75rem;
+            color: var(--text-muted-dark);
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            padding-top: 1.5rem;
+            padding-bottom: 0.5rem;
+            margin-top: auto;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* ================= RIGHT LIGHT PANEL ================= */
+        .right-panel {
+            width: 50%;
+            background-color: var(--bg-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem 2rem;
+        }
+
+        .form-wrapper {
+            width: 100%;
+            max-width: 380px;
+        }
+
+        .form-header h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+        }
+
+        .form-header p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin-bottom: 2rem;
+        }
+
+        /* Form Group Elements */
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        .input-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px 14px;
+            background-color: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            font-family: inherit;
+            transition: all 0.2s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--gold-accent);
+            box-shadow: 0 0 0 3px rgba(166, 138, 92, 0.15);
+        }
+
+        .toggle-password {
+            position: absolute;
+            right: 12px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 4px;
+        }
+
+        .toggle-password:hover {
+            color: var(--text-dark);
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            width: 100%;
+            margin-top: 0.5rem;
+            padding: 13px 16px;
+            background-color: var(--gold-accent);
+            color: var(--white);
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--gold-hover);
+        }
+
+        .submit-btn:active {
+            transform: scale(0.995);
+        }
+
+        /* Spinner Effect */
+        .spinner {
+            width: 16px;
+            height: 16px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-top-color: #ffffff;
+            border-radius: 50%;
+            animation: spin 0.6s linear infinite;
+            display: none;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Footer Link */
+        .form-footer-link {
+            margin-top: 1.5rem;
+            text-align: left;
+        }
+
+        .form-footer-link button {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            font-size: 0.78rem;
+            cursor: pointer;
+            font-family: inherit;
+            padding: 0;
+            text-align: left;
+            transition: color 0.2s;
+        }
+
+        .form-footer-link button:hover {
+            color: var(--text-dark);
+        }
+
+        /* Feedback Banner */
+        .feedback-banner {
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            margin-bottom: 1.25rem;
+            display: none;
+            font-weight: 500;
+        }
+
+        .feedback-banner.success {
+            background-color: #e6f4ea;
+            color: #137333;
+            border: 1px solid #ceead6;
+            display: block;
+        }
+
+        .feedback-banner.info {
+            background-color: #fef7e0;
+            color: #b06000;
+            border: 1px solid #fef0c7;
+            display: block;
+        }
+
+        /* Responsive Mobile Layout */
+        @media (max-width: 900px) {
+            .split-container {
+                flex-direction: column;
+                min-height: 100vh;
+            }
+            .left-panel {
+                width: 100%;
+                min-height: auto;
+                padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+            }
+            .right-panel {
+                width: 100%;
+                padding: 3rem 1.5rem;
+            }
+            .carousel-headline {
+                font-size: 1.85rem;
+            }
+            .left-footer {
+                margin-top: 2rem;
+            }
+        }

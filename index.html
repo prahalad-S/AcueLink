@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pen</title>
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+  </head>
+<body>
+ <div class="split-container">
+
+        <!-- Left Dark Panel -->
+        <div class="left-panel">
+            <div class="brand-header">
+                <h1>ACUE</h1>
+                <p>JOB DESK</p>
+            </div>
+
+            <div class="carousel-container">
+                <h2 id="carousel-text" class="carousel-headline">
+                    From first call to final install, every job in one place.
+                </h2>
+
+                <div class="dash-slider" id="dash-slider">
+                    <button class="dash-btn active" onclick="switchSlide(0)" aria-label="Slide 1"></button>
+                    <button class="dash-btn" onclick="switchSlide(1)" aria-label="Slide 2"></button>
+                    <button class="dash-btn" onclick="switchSlide(2)" aria-label="Slide 3"></button>
+                    <button class="dash-btn" onclick="switchSlide(3)" aria-label="Slide 4"></button>
+                    <button class="dash-btn" onclick="switchSlide(4)" aria-label="Slide 5"></button>
+                    <button class="dash-btn" onclick="switchSlide(5)" aria-label="Slide 6"></button>
+                    <button class="dash-btn" onclick="switchSlide(6)" aria-label="Slide 7"></button>
+                    <button class="dash-btn" onclick="switchSlide(7)" aria-label="Slide 8"></button>
+                </div>
+            </div>
+
+            <!-- Bottom Left Location Caption -->
+            <div class="left-footer">
+                Acue Marmonite · Carrollton, TX
+            </div>
+        </div>
+
+        <!-- Right Light Form Panel -->
+        <div class="right-panel">
+            <div class="form-wrapper">
+                
+                <div class="form-header">
+                    <h2>Sign in</h2>
+                    <p>Office staff and crews use the same sign-in.</p>
+                </div>
+
+                <div id="feedback-banner" class="feedback-banner"></div>
+
+                <form id="login-form" onsubmit="handleFormSubmit(event)">
+                    <div class="form-group">
+                        <label for="identity">E-mail or phone</label>
+                        <input 
+                            type="text" 
+                            id="identity" 
+                            class="form-input" 
+                            required 
+                            autocomplete="username"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="input-container">
+                            <input 
+                                type="password" 
+                                id="password" 
+                                class="form-input" 
+                                required 
+                                autocomplete="current-password"
+                            >
+                            <button type="button" class="toggle-password" onclick="togglePassword()" id="toggle-btn">Show</button>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="submit-btn">
+                        <span id="btn-text">Sign in</span>
+                        <div class="spinner" id="btn-spinner"></div>
+                    </button>
+                </form>
+
+                <div class="form-footer-link">
+                    <button onclick="triggerForgotPassword()">
+                        Forgot your password? Ask the office to reset it.
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
